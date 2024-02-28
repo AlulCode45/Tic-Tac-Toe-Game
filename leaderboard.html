@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>TIC TAC TOE</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Player</th>
+                        <th>Jumlah Menang</th>
+                    </tr>
+                </thead>
+                <tbody id="rank">
+                </tbody>
+            </table>
+            <a id="leaderboard" onclick="reset()">Reset</a>
+            <a href="/">Keluar</a>
+        </div>
+    </div>
+    <script>
+        var player1Wins = parseInt(localStorage.getItem('player1')) || 0;
+        var player2Wins = parseInt(localStorage.getItem('player2')) || 0;
+
+        if (player1Wins > player2Wins) {
+            document.getElementById('rank').innerHTML = "<tr><td>Player 1</td><td>" + player1Wins + "</td></tr><tr><td>Player 2</td><td>" + player2Wins + "</td></tr>";
+        } else {
+            document.getElementById('rank').innerHTML = "<tr><td>Player 2</td><td>" + player2Wins + "</td></tr><tr><td>Player 1</td><td>" + player1Wins + "</td></tr>";
+        }
+
+        function reset() {
+            localStorage.setItem('player1', 0)
+            localStorage.setItem('player2', 0)
+            window.location.reload()
+        }
+
+    </script>
+</body>
+
+</html>

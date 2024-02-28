@@ -1,0 +1,123 @@
+body {
+    background: url('../assets/backgound.jpg');
+    background-size: 100% 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+canvas {
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: white;
+}
+
+.timer {
+    position: absolute;
+    right: 370px;
+    top: 120px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    background: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#giliran {
+    color: white;
+}
+
+.winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    color: white;
+    place-content: center;
+    z-index: 111;
+    text-align: center;
+}
+
+.splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    color: white;
+    place-content: center;
+    z-index: 111;
+    text-align: center;
+}
+
+.winner a {
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 17px;
+    text-decoration: none;
+    background: white;
+    display: block;
+    color: black;
+    font-weight: bolder;
+}
+
+.winner h1 {
+    line-height: 0;
+    margin-top: -50px;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: #55608f;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}

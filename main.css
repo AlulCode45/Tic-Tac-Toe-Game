@@ -1,0 +1,104 @@
+body {
+    background: url('assets/backgound.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px 70px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 15px rgba(255, 255, 255, 0.77);
+}
+
+a {
+    border-radius: 10px;
+    padding: 17px;
+    text-decoration: none;
+    background: white;
+    display: block;
+    color: black;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+#leaderboard {
+    margin-top: 50px;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: #55608f;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+.splash {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    place-content: center;
+    background: rgba(0, 0, 0, 1);
+    z-index: 1000;
+}
+
+.splash img {
+    background: white;
+    padding: 20px;
+    border-radius: 100%;
+    box-shadow: 3px 3px 20px 20px rgba(255, 255, 255, 0.77);
+    animation: spin 2s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
